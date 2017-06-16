@@ -1,0 +1,7 @@
+deployment:
+  production:
+    branch: master
+    commands:
+      - ssh circleci@46.101.64.34 '~/stopsally'
+      - rsync -avz ./ circleci@46.101.64.34:~/sally
+      - ssh circleci@46.101.64.34 '~/startsally'
