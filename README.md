@@ -1,0 +1,2 @@
+# sally
+Friendly helpful slackbot
