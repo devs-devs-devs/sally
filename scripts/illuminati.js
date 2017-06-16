@@ -15,6 +15,8 @@
 
 module.exports = function(robot) {
   robot.hear(new RegExp(robot.name, "i"), function(res) {
-    robot.adapter.client.web.reactions.add('kissing_heart', {channel: res.message.room, timestamp: res.message.id});
+    if (robot.adapterName == 'slack') {
+      robot.adapter.client.web.reactions.add('kissing_heart', {channel: res.message.room, timestamp: res.message.id});
+    }
   });
 }
