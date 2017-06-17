@@ -4,6 +4,9 @@
   "private": true,
   "author": "ChrisDBrown <owner@chrisdbrown.co.uk>",
   "description": "BOTS BOTS BOTS",
+  "scripts": {
+    "lint": "eslint scripts/*.js"
+  },
   "dependencies": {
     "hubot": "^2.19.0",
     "hubot-help": "^0.2.0",

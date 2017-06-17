@@ -4,7 +4,7 @@ machine:
 
 test:
   post:
-    - node_modules/eslint/bin/eslint.js scripts/**
+    - npm run lint
 
 deployment:
   production:
