@@ -52,7 +52,7 @@ module.exports = (robot) => {
   robot.respond(new RegExp('(urban)( define)?( example)? (.*)', 'i'), (msg) => {
     urbanDictionary(msg, msg.match[4], (found, entry, sounds) => {
       if (!found) {
-        msg.send(`msg${msg.match[4]} not found`);
+        msg.send(`${msg.match[4]} not found`);
         return;
       }
 
