@@ -26,7 +26,7 @@ const urbanDictionary = (msg, query, callback) => {
       const result = JSON.parse(body);
 
       if (result.list.length) {
-        return callback(true, result.list[0], result.sounds);
+        return callback(true, result.list[0]);
       }
 
       return callback(false);
@@ -35,22 +35,18 @@ const urbanDictionary = (msg, query, callback) => {
 
 module.exports = (robot) => {
   robot.respond(new RegExp('what ?is ([^?]*)[?]*', 'i'), (msg) => {
-    urbanDictionary(msg, msg.match[1], (found, entry, sounds) => {
+    urbanDictionary(msg, msg.match[1], (found, entry) => {
       if (!found) {
         msg.send(`I don't know what ${msg.match[1]} is`);
         return;
       }
 
       msg.send(entry.definition);
-
-      if (sounds && sounds.length) {
-        msg.send(sounds.join(' '));
-      }
     });
   });
 
   robot.respond(new RegExp('(urban)( define)?( example)? (.*)', 'i'), (msg) => {
-    urbanDictionary(msg, msg.match[4], (found, entry, sounds) => {
+    urbanDictionary(msg, msg.match[4], (found, entry) => {
       if (!found) {
         msg.send(`${msg.match[4]} not found`);
         return;
@@ -60,10 +56,6 @@ module.exports = (robot) => {
         msg.send(entry.example);
       } else {
         msg.send(entry.definition);
-      }
-
-      if (sounds && sounds.length) {
-        msg.send(sounds.join(' '));
       }
     });
   });
