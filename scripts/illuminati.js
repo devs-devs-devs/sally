@@ -11,7 +11,7 @@
 //   hubot - blows a kiss
 //
 // Author:
-//   ChrisDBrown <owner@chrisdbrown.co.uk>
+//   Chris D Brown (@ChrisDeeBrown
 
 module.exports = (robot) => {
   robot.hear(new RegExp(robot.name, 'i'), (res) => {
