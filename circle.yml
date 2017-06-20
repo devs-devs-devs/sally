@@ -11,5 +11,5 @@ deployment:
     branch: master
     commands:
       - ssh circleci@46.101.64.34 '~/stopsally'
-      - rsync -avz --exclude node_modules/ ./ circleci@46.101.64.34:~/sally
+      - rsync -avz --exclude node_modules/ --delete ./ circleci@46.101.64.34:~/sally
       - ssh circleci@46.101.64.34 '~/startsally'

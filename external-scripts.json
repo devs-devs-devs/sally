@@ -1,4 +1,5 @@
 [
+  "hubot-caniuse",
   "hubot-help",
   "hubot-maps",
   "hubot-redis-brain"

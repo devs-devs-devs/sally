@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "hubot": "^2.19.0",
+    "hubot-caniuse": "^1.0.3",
     "hubot-help": "^0.2.0",
     "hubot-maps": "0.0.2",
     "hubot-redis-brain": "0.0.3",
