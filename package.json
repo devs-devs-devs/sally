@@ -9,13 +9,13 @@
   },
   "dependencies": {
     "hubot": "^2.19.0",
+    "hubot-answers": "^0.2.1",
     "hubot-caniuse": "^1.0.3",
     "hubot-help": "^0.2.0",
     "hubot-maps": "0.0.2",
     "hubot-redis-brain": "0.0.3",
     "hubot-scripts": "^2.17.2",
-    "hubot-slack": "^4.3.4",
-    "hubot-whois": "0.0.6"
+    "hubot-slack": "^4.3.4"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
