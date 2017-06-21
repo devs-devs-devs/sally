@@ -26,7 +26,7 @@ const urbanDictionary = (msg, query, callback) => {
       const result = JSON.parse(body);
 
       if (result.list.length) {
-        return callback(true, result.list[0]);
+        return callback(true, result.list[Math.floor(Math.random() * result.list.length)]);
       }
 
       return callback(false);
