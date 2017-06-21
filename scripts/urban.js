@@ -34,7 +34,7 @@ const urbanDictionary = (msg, query, callback) => {
 };
 
 module.exports = (robot) => {
-  robot.respond(new RegExp('(?:what|who) ?(?:is a|is an|is|are) ([^?]*)[?]*', 'i'), (msg) => {
+  robot.respond(new RegExp('(?:what|who)(?: is a| is an| is| are) ([^?]*)[?]*', 'i'), (msg) => {
     urbanDictionary(msg, msg.match[1], (found, entry) => {
       if (!found) {
         msg.send(`I don't know what ${msg.match[1]} is`);

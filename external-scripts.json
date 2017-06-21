@@ -2,5 +2,6 @@
   "hubot-caniuse",
   "hubot-help",
   "hubot-maps",
-  "hubot-redis-brain"
+  "hubot-redis-brain",
+  "hubot-whois"
 ]
