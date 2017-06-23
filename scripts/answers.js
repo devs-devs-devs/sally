@@ -8,7 +8,7 @@
 //   None
 //
 // Commands:
-//   @hubot [yes/no question]?
+//   hubot [yes/no question]?
 //
 // Author:
 //   Chris D Brown (@ChrisDeeBrown)
