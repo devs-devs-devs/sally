@@ -15,7 +15,7 @@
 
 module.exports = (robot) => {
   robot.hear(new RegExp(robot.name, 'i'), (res) => {
-    if (robot.adapterName === 'slack') {
+    if (robot.adapterName === 'slack' && Math.random() < 0.1) {
       robot.adapter.client.web.reactions.add(
         'kissing_heart',
         { channel: res.message.room, timestamp: res.message.id },
